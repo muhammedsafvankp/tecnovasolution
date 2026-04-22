@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { MockDataProvider } from './store/MockDataStore.jsx'
+import { SupabaseDataProvider } from './store/SupabaseDataStore.jsx'
 import App from './App.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MockDataProvider>
+    <SupabaseDataProvider>
       <App />
-    </MockDataProvider>
+    </SupabaseDataProvider>
   </StrictMode>,
 )

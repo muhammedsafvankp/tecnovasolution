@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, NavLink, Link } from 'react-router-dom';
 import { LayoutDashboard, Users, Package, FileText, FileSpreadsheet, Wrench, Wallet, Settings, LogOut, Zap } from 'lucide-react';
+import { supabase } from '../supabaseClient';
 
 const Sidebar = () => {
   const navItems = [
@@ -37,7 +38,7 @@ const Sidebar = () => {
 
       <div className="sidebar-footer">
         <div className="user-hint">Admin User</div>
-        <button className="logout-btn">
+        <button className="logout-btn" onClick={() => supabase.auth.signOut()}>
           <LogOut size={16} /> Sign out
         </button>
       </div>
