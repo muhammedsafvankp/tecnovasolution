@@ -39,10 +39,6 @@ const Sidebar = () => {
         <button className="logout-btn" onClick={() => supabase.auth.signOut()}>
           <LogOut size={16} /> Sign out
         </button>
-        <div style={{ marginTop: '1.5rem', fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', lineHeight: '1.5' }}>
-          &copy; {new Date().getFullYear()} Tecnova Solution<br/>
-          Powered by <a href="https://muhammedsafvan.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)', textDecoration: 'none', fontWeight: 500 }}>Muhammed Safvan</a>
-        </div>
       </div>
     </aside>
   );
@@ -52,8 +48,14 @@ const MainLayout = () => {
   return (
     <div className="app-container">
       <Sidebar />
-      <main className="main-content">
-        <Outlet />
+      <main className="main-content" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <div style={{ flex: '1 0 auto' }}>
+          <Outlet />
+        </div>
+        
+        <footer style={{ marginTop: 'auto', padding: '1.5rem', textAlign: 'center', fontSize: '0.875rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-color)', backgroundColor: 'white' }}>
+          Powered by <a href="https://muhammedsafvan.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)', textDecoration: 'none', fontWeight: 600 }}>Muhammed Safvan</a>
+        </footer>
       </main>
     </div>
   );

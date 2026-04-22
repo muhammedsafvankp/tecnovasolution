@@ -66,25 +66,14 @@ const Login = () => {
             />
           </div>
           <button type="submit" className="btn-primary" style={{ width: '100%', padding: '0.75rem', marginTop: '0.5rem' }} disabled={loading}>
-            {loading ? 'Authenticating...' : (isSignUp ? 'Create Account' : 'Sign In')}
+            {loading ? 'Authenticating...' : 'Sign In'}
           </button>
         </form>
-
-        <div style={{ textAlign: 'center', fontSize: '0.875rem' }}>
-          <span style={{ color: 'var(--text-muted)' }}>{isSignUp ? 'Already have an account?' : 'Need an account?'}</span>{' '}
-          <button 
-            type="button" 
-            style={{ color: 'var(--brand-blue)', fontWeight: 600 }}
-            onClick={() => setIsSignUp(!isSignUp)}
-          >
-            {isSignUp ? 'Sign In' : 'Register'}
-          </button>
+        
+        <div style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--text-muted)', textAlign: 'center', lineHeight: '1.6' }}>
+          &copy; {new Date().getFullYear()} Tecnova Solution<br/>
+          Powered by <a href="https://muhammedsafvan.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)', textDecoration: 'none', fontWeight: 600 }}>Muhammed Safvan</a>
         </div>
-      </div>
-
-      <div style={{ marginTop: '2.5rem', fontSize: '0.875rem', color: 'var(--text-muted)', textAlign: 'center', lineHeight: '1.6' }}>
-        &copy; {new Date().getFullYear()} Tecnova Solution<br/>
-        Powered by <a href="https://muhammedsafvan.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)', textDecoration: 'none', fontWeight: 600 }}>Muhammed Safvan</a>
       </div>
     </div>
   );
