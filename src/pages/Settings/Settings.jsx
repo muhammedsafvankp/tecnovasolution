@@ -25,10 +25,16 @@ const Settings = () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) return;
       
-      const { data } = await supabase.from('user_roles').select('*').eq('id', session.user.id).single();
+      const { data, error } = await supabase.from('user_roles').select('*').eq('id', session.user.id).single();
       if (data) {
         setRole(data.role);
-        if (data.role === 'Super admin') {
+        if (data.role === 'Super admin') fetchStaff();
+      } else {
+        // Auto-bootstrap: If no roles exist in the DB, make this first user a Super admin
+        const { count } = await supabase.from('user_roles').select('*', { count: 'exact', head: true });
+        if (count === 0) {
+          await supabase.from('user_roles').insert([{ id: session.user.id, email: session.user.email, role: 'Super admin' }]);
+          setRole('Super admin');
           fetchStaff();
         }
       }

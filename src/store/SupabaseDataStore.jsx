@@ -135,6 +135,9 @@ export const SupabaseDataProvider = ({ children }) => {
   };
 
   const saveSettings = async (newSettings) => {
+    // Optimistic UI update so it instantly persists across navigation
+    setSettings(newSettings);
+    
     const payload = {
       company_name: newSettings.companyName,
       gst_rate: newSettings.gstRate,
@@ -142,7 +145,6 @@ export const SupabaseDataProvider = ({ children }) => {
       phone: newSettings.phone,
       email: newSettings.email
     };
-    // Since settings is 1 row, we update ID 1 conceptually, but we can just use delete all / insert if lazy. For robust, assuming ID 1 exists.
     const { data: existing } = await supabase.from('settings').select('id').limit(1).single();
     if (existing) {
        await supabase.from('settings').update(payload).eq('id', existing.id);
