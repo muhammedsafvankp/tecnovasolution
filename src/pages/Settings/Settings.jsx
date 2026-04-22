@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useData } from '../../store/MockDataStore';
+import { useData } from '../../store/SupabaseDataStore';
 
 const Settings = () => {
   const { settings, setSettings } = useData();

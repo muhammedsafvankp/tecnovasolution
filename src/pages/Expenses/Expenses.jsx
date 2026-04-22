@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useData } from '../../store/MockDataStore';
+import { useData } from '../../store/SupabaseDataStore';
 import { Plus, Search, Wallet, Trash2 } from 'lucide-react';
 
 const Expenses = () => {

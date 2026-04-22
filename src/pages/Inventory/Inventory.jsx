@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useData } from '../../store/MockDataStore';
+import { useData } from '../../store/SupabaseDataStore';
 import { Plus, Search, Edit, Trash2 } from 'lucide-react';
 
 const Inventory = () => {

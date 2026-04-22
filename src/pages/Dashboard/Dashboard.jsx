@@ -1,5 +1,5 @@
 import React from 'react';
-import { useData } from '../../store/MockDataStore';
+import { useData } from '../../store/SupabaseDataStore';
 import { IndianRupee, FileText, Wrench, AlertTriangle, Box, Users } from 'lucide-react';
 
 const StatCard = ({ title, value, subtext, icon, trend }) => {
