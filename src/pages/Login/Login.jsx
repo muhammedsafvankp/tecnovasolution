@@ -36,10 +36,9 @@ const Login = () => {
       <Toaster position="top-right" />
       <div className="card" style={{ width: '100%', maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '2rem', padding: '2.5rem' }}>
         <div style={{ textAlign: 'center' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--brand-blue-light)', color: 'var(--brand-blue)', width: '48px', height: '48px', borderRadius: '50%', marginBottom: '1rem' }}>
-            <Zap size={24} />
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <img src="/logo.png" alt="Tecnova Solution Logo" style={{ height: '70px', objectFit: 'contain' }} />
           </div>
-          <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.25rem' }}>TECNOVA SOLUTION</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Business Management Portal</p>
         </div>
 

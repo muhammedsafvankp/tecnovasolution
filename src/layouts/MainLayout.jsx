@@ -17,10 +17,8 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-      <div className="sidebar-header">
-        <div className="sidebar-logo">
-          <Zap className="text-brand-blue" size={24} color="#1D4ED8" /> TECNOVA <span>SOLUTION</span>
-        </div>
+      <div className="sidebar-header" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
+        <img src="/logo.png" alt="Tecnova Solution Logo" style={{ maxWidth: '100%', maxHeight: '45px', objectFit: 'contain' }} />
       </div>
       
       <nav className="sidebar-nav">
