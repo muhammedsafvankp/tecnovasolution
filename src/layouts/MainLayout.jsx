@@ -54,7 +54,7 @@ const MainLayout = () => {
         </div>
         
         <footer style={{ marginTop: 'auto', padding: '1.5rem', textAlign: 'center', fontSize: '0.875rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-color)', backgroundColor: 'white' }}>
-          <div style={{ marginBottom: '0.25rem' }}>&copy; {new Date().getFullYear()} Tecnova Solution</div>
+          <div style={{ marginBottom: '0.25rem' }}>&copy; {new Date().getFullYear()} Tecnova Solution. All rights reserved.</div>
           Powered by <a href="https://muhammedsafvan.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)', textDecoration: 'none', fontWeight: 600 }}>Muhammed Safvan</a>
         </footer>
       </main>

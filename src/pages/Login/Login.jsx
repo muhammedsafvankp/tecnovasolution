@@ -71,7 +71,7 @@ const Login = () => {
         </form>
         
         <div style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--text-muted)', textAlign: 'center', lineHeight: '1.6' }}>
-          &copy; {new Date().getFullYear()} Tecnova Solution<br/>
+          &copy; {new Date().getFullYear()} Tecnova Solution. All rights reserved.<br/>
           Powered by <a href="https://muhammedsafvan.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)', textDecoration: 'none', fontWeight: 600 }}>Muhammed Safvan</a>
         </div>
       </div>
