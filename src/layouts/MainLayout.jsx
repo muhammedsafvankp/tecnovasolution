@@ -39,6 +39,10 @@ const Sidebar = () => {
         <button className="logout-btn" onClick={() => supabase.auth.signOut()}>
           <LogOut size={16} /> Sign out
         </button>
+        <div style={{ marginTop: '1.5rem', fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', lineHeight: '1.5' }}>
+          &copy; {new Date().getFullYear()} Tecnova Solution<br/>
+          Powered by <a href="https://muhammedsafvan.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)', textDecoration: 'none', fontWeight: 500 }}>Muhammed Safvan</a>
+        </div>
       </div>
     </aside>
   );
