@@ -157,12 +157,12 @@ export const SupabaseDataProvider = ({ children }) => {
 
   const value = {
     customers, 
-    addCustomer: (item) => addItem('customers', item), 
+    addCustomer: (item) => addItem('customers', item, (data) => ({ name: data.name, phone: data.phone, email: data.email, gst: data.gst })), 
     deleteCustomer: (id) => deleteItem('customers', id), 
     updateCustomer: (id, data) => updateItem('customers', id, data),
     
     inventory, 
-    addProduct: (item) => addItem('inventory', item), 
+    addProduct: (item) => addItem('inventory', item, (data) => ({ name: data.name, category: data.category, sku: data.sku, price: data.price, stock: data.stock })), 
     deleteProduct: (id) => deleteItem('inventory', id), 
     updateProduct: (id, data) => updateItem('inventory', id, data),
     
@@ -186,7 +186,7 @@ export const SupabaseDataProvider = ({ children }) => {
     updateService: (id, data) => updateItem('services', id, data),
     
     expenses, 
-    addExpense: (item) => addItem('expenses', item), 
+    addExpense: (item) => addItem('expenses', item, (data) => ({ date: data.date, category: data.category, amount: data.amount, vendor: data.vendor, description: data.description })), 
     deleteExpense: (id) => deleteItem('expenses', id), 
     updateExpense: (id, data) => updateItem('expenses', id, data),
     
